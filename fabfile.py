@@ -1,5 +1,5 @@
 """
-Starter fabfile for deploying the {{ project_name }} project.
+Starter fabfile for deploying the push_and_pull project.
 
 Change all the things marked CHANGEME. Other things can be left at their
 defaults if you are happy with the default layout.
@@ -14,13 +14,13 @@ from fabric.operations import _prefix_commands, _prefix_env_vars
 #from fabric.context_managers import cd, lcd, settings, hide
 
 # CHANGEME
-env.hosts = ['user@{{ project_name }}.example.com']
-env.code_dir = '/srv/www/{{ project_name }}'
-env.project_dir = '/srv/www/{{ project_name }}/{{ project_name }}'
-env.static_root = '/srv/www/{{ project_name }}/static/'
-env.virtualenv = '/srv/www/{{ project_name }}/.virtualenv'
+env.hosts = ['user@push_and_pull.example.com']
+env.code_dir = '/srv/www/push_and_pull'
+env.project_dir = '/srv/www/push_and_pull/push_and_pull'
+env.static_root = '/srv/www/push_and_pull/static/'
+env.virtualenv = '/srv/www/push_and_pull/.virtualenv'
 env.code_repo = 'git@github.com:user/{{project_name}}.git'
-env.django_settings_module = '{{ project_name }}.settings'
+env.django_settings_module = 'push_and_pull.settings'
 
 # Python version
 PYTHON_BIN = "python2.7"
@@ -135,7 +135,7 @@ def webserver_restart():
 def restart():
     """ Restart the wsgi process """
     with cd(env.code_dir):
-        run("touch %s/{{ project_name }}/wsgi.py" % env.code_dir)
+        run("touch %s/push_and_pull/wsgi.py" % env.code_dir)
 
 
 def build_static():
