@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     # Django contrib apps
     'grappelli',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -49,9 +50,15 @@ INSTALLED_APPS = (
     'djcelery',
     'debug_toolbar',
     'compressor',
+    'allauth',
+    'allauth.account',
+    # 'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.google',
 
     # Application base, containing global templates.
-    'base',
+    'push_and_pull',
+    'base'
 
     # Local apps, referenced via appname
 )
@@ -101,6 +108,8 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -152,12 +161,29 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     'django.template.context_processors.request',
 ]
 
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 # Already defined Django-related contexts here
+
+#                 # `allauth` needs this from django
+#                 'django.template.context_processors.request',
+#             ],
+#         },
+#     },
+# ]
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or
     # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'templates'),
+    os.path.join(PROJECT_ROOT, 'base', 'templates'),
+
 )
 
 # List of callables that know how to import templates from various sources.

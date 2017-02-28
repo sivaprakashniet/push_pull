@@ -6,3 +6,107 @@
    css/less/bootstrap.less file.
 
    ========================================================================== */
+/* Style overwrite */
+.panel{
+	border-radius: 1px;
+}
+.form-group > label{
+	font-weight: 500;
+}
+.form-control{
+	border-radius: 1px;
+}
+.btn {
+	border-radius: 1px;
+	padding: 3px 12px;
+}
+
+.mh510 {
+	min-height: 510px;
+}
+/*.custom-header {
+	position: fixed;
+}*/
+.navbar {
+	border-radius: 0px !important;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #BFD4E9;
+}
+.navbar-default{
+	padding: 0 15px;
+	border-top: none;
+	background: #283e4a !important; 
+	border: none;
+	font-size: 14px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+	color: #fff;
+	background-color:#283e4a;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+	color: #fff;
+}
+.navbar-default .navbar-nav > .active > a{
+	background-color: #283e4a;
+}
+
+.w290{
+	width: 290px !important;
+}
+
+.h25{
+	height: 25px !important;
+}
+.mt12{
+	margin-top: 12px;
+}
+.min-height-container{
+	min-height: 500px;
+}
+.fsize18 {
+	font-size: 18px;
+}
+.auth-border {
+	padding: 35px;
+	border: 1px solid #e4e6e8;
+}
+.middle-border {
+	min-height: 350px;
+	margin-top: 20px;
+	border-right: 1px solid #ddd;
+}
+
+.navbar-brand {
+	padding: 5px 15px;
+}
+.question{
+	font-size: 16px;
+}
+.hr-line {
+	width: 100%;
+	height: 20px; 
+	border-bottom: 1px solid #ccc; 
+	text-align: center;
+	padding-top:10px; 
+	margin: 15px 0px;
+}
+.hr-line > span {
+	font-size: 15px; 
+	background-color: #F3F5F6; 
+	padding: 5px 10px;
+	border-radius: 50%;
+}
+.question-list{
+	margin-bottom: 15px;
+}
+.question-list > .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+	border-top: none;
+}
+.img-reponsive{
+	width: 100px;
+	height: 100px;
+}
+.validation{
+	color: red;
+}
